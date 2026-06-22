@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Für Elisa</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Hearts & Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="music/background.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Music Player Controls -->
+    <div id="music-player" class="music-player-hidden">
+        <button id="music-toggle" aria-label="Musik abspielen">
+            <span class="play-icon">▶</span>
+            <span class="pause-icon hidden">❚❚</span>
+        </button>
+        <div class="music-info">
+            <span class="music-title">Echte Love</span>
+            <div class="music-wave" id="music-wave">
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro Envelope Screen -->
+    <div id="envelope-overlay" class="envelope-overlay">
+        <div class="envelope-wrapper">
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-pocket">
+                    <div class="envelope-pocket-text">Für Elisa</div>
+                </div>
+                <div class="envelope-letter" id="envelope-letter">
+                    <div class="envelope-letter-text">Für Elisa</div>
+                </div>
+                <div class="wax-seal" id="wax-seal">
+                    <span class="seal-heart">❤</span>
+                </div>
+            </div>
+            <p class="click-hint">Klicke auf das Siegel, um den Brief zu öffnen</p>
+        </div>
+    </div>
+
+    <!-- Main Content Container (Revealed after envelope opens) -->
+    <div id="main-content" class="main-content-hidden">
+        <div class="scroll-container">
+            <!-- Love Letter -->
+            <main class="letter-card">
+                <div class="letter-header">
+                    <span class="letter-date">Für meine Elisa</span>
+                </div>
+                
+                <article class="letter-text" id="letter-text">
+                    <p>Hi maus,</p>
+                    <p>weißt du, ich schreib jetzt einfach wieder mal drauf los. Ich bin die ganze Zeit schon am Überlegen, ob ich dir an deinem Geburtstag schreiben soll.</p>
+                    <p>Auf der einen Seite: Ja, ich will dir schreiben, ich will dass du weißt, dass ich noch an dich denke und dich nicht vergessen hab, und ich will dir auch einfach mal wieder schreiben und was von meiner maus hören.</p>
+                    <p>Auf der anderen Seite denk ich mir aber: Kannst du doch nicht machen, jetzt nachdem wir keinen Kontakt hatten wieder schreiben? Vielleicht hast du gar keinen Bock, dass ich mich bei dir melde?</p>
+                    <p>Ich komm mir hier beim Schreiben auch wieder vor wie damals, als ich dir den Text geschrieben hab, als wir keinen Kontakt hatten.</p>
+                    <p>Genau wie damals wird der Drang dir zu schreiben immer größer, und ich denk ich tu das Richtige, wenn ich auf mein Herz hör und dir schreib, auch wenn ich nicht weiß, wo das hinführen soll, weil die Situation und das Problem dabei ist ja eben wie es ist.</p>
+                    <p>Trotz dessen, dass mich diese Situation so belastet, kann ich nicht aufhören an dich zu denken und will trotzdem den Kontakt zu dir.</p>
+                    <p>Ich vermisse dich nämlich so so so doll und mein Herz ruft einfach nach dir. Ich träume momentan wirklich jede Nacht von dir. Es ist so komisch im Traum neben dir zu liegen, dich endlich wieder in den Arm zu nehmen, dir sagen wie sehr ich dich vermisst hab, und im nächsten Moment wache ich auf, und das Gefühl von dieser Freude, die nur du in mir auslösen kannst, wird ausgetauscht mit der traurigen Realität, dass wir seit 2 Monaten kein Wort gewechselt haben und ich dich noch länger schon nicht mehr in den Arm geschlossen hab.</p>
+                    <p>Der Gedanke, dass ich so distanziert bin von der Person, die mich eigentlich am besten kennt und die mir so so viel bedeutet, lässt mich auch nur mehr daran denken dir zu schreiben. Und das ist auch der Grund, wieso ich einfach mal meine Gefühle loswerden muss und sie wenigstens aufschreibe. So oft, wenn ich alleine bin in Hamburg, und Niki wie jetzt gerade nicht zu Hause ist, wird mir das alles zu viel. Und genau deswegen muss ich jetzt auch meine Gedanken irgendwie zu „Papier“ bringen.</p>
+                    <p>Ich weiß grad auch gar nicht mehr, wie ich weiter schreiben soll. Ich hab so viele Sätze angefangen und dann wieder gelöscht, so viele Gedanken und so viel zu sagen, aber irgendwie weiß ich dadurch auch gar nicht mehr, was ich überhaupt sagen will.</p>
+                    <p>Es gibt aber auch zu viele Dinge, die ich dir gern sagen würde, die ich dir erzählen will, wo mich deine Meinung oder Reaktion interessiert. So viele Sachen, für die ich mich entschuldigen will, und so viele Sachen, die ich gerne besser gemacht hätte.</p>
+                    <p>Ich würd dir am liebsten jetzt schon schreiben und nicht noch bis zu deinem Geburtstag warten, aber ich glaub das ist dumm? Vielleicht mach ich es trotzdem, weil ich dich einfach so vermisse und diese Distanz zwischen uns macht mich einfach so traurig… An der Stelle wollt ich sagen: Es tut mir leid, dass die letzte Zeit, wo wir noch geschrieben haben, so von halbherzigem Schreiben geprägt war. Das war doof, von beiden Seiten (ja ich weiß, du schreibst so, weil ich so geschrieben hab).</p>
+                    <p>Ja, lowkey hab ich mich jetzt auch dafür entschieden, dir den Text einfach heute zu senden. Ich kann einfach nicht mehr abwarten, es macht mich so unruhig. Aber ich hab auch so Angst dir zu schreiben, weil ich natürlich nicht weiß, ob und wie du antwortest.</p>
+                    <p>Aber ich denke, wenn du die Nase voll von mir hast, dann hab ich wenigstens versucht dir nochmal zu schreiben…</p>
+                    <p>Ich kann sonst aber nicht einfach damit abschließen. Wenn ich die Chance hab, dir noch einmal in die Augen zu schauen, dich noch einmal in den Arm zu nehmen, und noch einmal mit dir zu lachen, dann schreibe ich dir… auch wenn das Risiko besteht, dass du wie gesagt gar keinen Bock hast, dass ich mich melde, und natürlich auch das Risiko, dass ich im Endeffekt noch trauriger bin.</p>
+                    <p>Aber was soll ich machen, wenn du immer in meinem Kopf bist? Ich vermisse dein Lächeln so sehr wenn ich Bilder von dir angucke. Letztens hab ich ein Bild gesehen, wo du vorm Spiegel standest, in deinem braunen Mantel mit dem weißen Schal, und du hast einfach nur da gestanden und süß gegrinst. Da musste ich so weinen.</p>
+                    <p>Oder gestern hab ich geguckt, was ich dir letztes Jahr zum Bday geschrieben hab. Da hattest du mit einer Audio geantwortet: „Danke maus mwuaaahh guck ich mir dann an, danke danke“ – da musste ich auch schon weinen. Ja, du kennst mich, geht's um dich, bin ich nah am Wasser gebaut.</p>
+                    <p>Ich will dich einfach wieder in den Arm nehmen.</p>
+                    <p>Ich würde so gerne wieder schöne Momente mit dir erleben und teilen, neue Sachen erleben.. mit dir in Amsterdam sein, mit dir um den Phoenixsee, mit dir neue Restaurants ausprobieren, wieder mit dir schwimmen und picknicken, und einfach all die simplen schönen Dinge, die mit dir perfekt werden.</p>
+                    <p>Ich hab so große Angst davor, dir die Nachricht zu senden.</p>
+                    <p>Falls du nicht antwortest und das dann für immer die letzte Nachricht an dich bleibt, wünsche ich dir nur das Beste. Danke, dass ich dich kennenlernen durfte.</p>
+                    <p>Hab einen schönen 29. Juli (g-Wort bringt Unglück zu früh), und denk immer dran: Du bist was Besonderes &lt;3 Drück Schafi, Hasi, Symba und Enti ganz ganz doll von mir und fühl auch du dich gedrückt.</p>
+                </article>
+
+                <div class="letter-signature">
+                    <p class="signature-text">In unendlicher Liebe,</p>
+                    <p class="signature-name">dein Dustin</p>
+                </div>
+            </main>
+
+            <!-- Counter Section -->
+            <section class="counter-section">
+                <h2 class="section-title">Weißt du noch, als wir uns das erste Mal gesehen haben?</h2>
+                <p class="counter-subtitle">so lange bist du schon in meinem kopf</p>
+                <div class="counter-container" id="time-counter">
+                    <div class="counter-box">
+                        <span class="counter-number" id="count-days">00</span>
+                        <span class="counter-label">Tage</span>
+                    </div>
+                    <div class="counter-box">
+                        <span class="counter-number" id="count-hours">00</span>
+                        <span class="counter-label">Stunden</span>
+                    </div>
+                    <div class="counter-box">
+                        <span class="counter-number" id="count-minutes">00</span>
+                        <span class="counter-label">Minuten</span>
+                    </div>
+                    <div class="counter-box">
+                        <span class="counter-number" id="count-seconds">00</span>
+                        <span class="counter-label">Sekunden</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Collage Section -->
+            <section class="collage-section">
+                <h2 class="section-title">Diese Bilder liebe ich so von uns/dir</h2>
+                <div class="collage-grid">
+                    <div class="collage-item item-large">
+                        <img src="assets/bild1.JPG" alt="Moment 1" class="collage-img">
+                        <div class="img-overlay">
+                            <span>❤</span>
+                        </div>
+                    </div>
+                    <div class="collage-item">
+                        <img src="assets/bild2.png" alt="Moment 2" class="collage-img">
+                        <div class="img-overlay">
+                            <span>❤</span>
+                        </div>
+                    </div>
+                    <div class="collage-item">
+                        <img src="assets/bild3.jpg" alt="Moment 3" class="collage-img">
+                        <div class="img-overlay">
+                            <span>❤</span>
+                        </div>
+                    </div>
+                    <div class="collage-item">
+                        <img src="assets/bild4.JPG" alt="Moment 4" class="collage-img">
+                        <div class="img-overlay">
+                            <span>❤</span>
+                        </div>
+                    </div>
+                    <div class="collage-item item-wide">
+                        <img src="assets/bild5.JPG" alt="Moment 5" class="collage-img">
+                        <div class="img-overlay">
+                            <span>❤</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Lightbox for Image Details -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" src="" alt="Vollbild Ansicht">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
